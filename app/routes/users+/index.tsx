@@ -1,10 +1,11 @@
 import { type DataFunctionArgs, json } from "@remix-run/node"
-import { Link, useLoaderData } from "@remix-run/react"
 import { requireUserId } from "~/utils/auth.server.ts";
+import { Link, useLoaderData } from "@remix-run/react"
 import { prisma } from '~/utils/db.server.ts'
 import { getUserImgSrc } from "~/utils/misc.ts";
 
-export async function loader() {
+export async function loader({request }: DataFunctionArgs) {
+    await requireUserId(request);
     const users = await prisma.user.findMany({
         select: {
             id: true,
