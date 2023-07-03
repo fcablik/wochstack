@@ -60,10 +60,14 @@ Wochstack is a Fullstack Development Environment that used to create high perfor
 
 <br/>
 
-## !TODO:
-- --> dashboard/admin setup - built in function of (requireUserId/requireUserWithPermission) to get to the /admin page, if not logged in, client(user) will be redirected to the login page 
-
+## Tips In Development
 - --> work with db (updating) --> schema.prisma: adding new models (table) -> we need to issue a migration (npx prisma migrate dev (lose data-continue- yes)+enter migration name)   ((WARNING) : old session is holding the old seed, so we need to clear the cookies/sessions in the browser (untill fixed in epicstack itself))
+
+
+## !TODO:
+- create sitemap for admin's functions visualization 
+- !DONE: setup the whole environment to be ready to work and develop own customizations to get ready for the actual real development
+- !DONE: dashboard/admin setup - built in function of (requireUserWithPermission/requireAdmin) to get to the /admin page, if not logged in, client(user) will be redirected to the login page
 
 
 ### For Discussion:

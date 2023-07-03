@@ -1,11 +1,12 @@
 import type { V2_MetaFunction } from '@remix-run/node'
-import { logos, stars } from './logos/logos.ts'
-import {
-	Tooltip,
-	TooltipContent,
-	TooltipProvider,
-	TooltipTrigger,
-} from '~/components/ui/tooltip.tsx'
+import { stars } from './logos/logos.ts'
+// import { logos } from './logos/logos.ts'
+// import {
+// 	Tooltip,
+// 	TooltipContent,
+// 	TooltipProvider,
+// 	TooltipTrigger,
+// } from '~/components/ui/tooltip.tsx'
 
 export const meta: V2_MetaFunction = () => [{ title: 'Epic Notes' }]
 
@@ -57,8 +58,8 @@ export default function Index() {
 
 				<div className="mx-auto mt-8 max-w-7xl px-4 py-2 sm:px-6 lg:px-8">
 					<div className="flex flex-wrap justify-center gap-8 rounded-3xl bg-slate-100 py-4 dark:bg-slate-200">
-						<TooltipProvider>
-							{logos.map(img => (
+						{/* <TooltipProvider> */}
+							{/* {logos.map(img => (
 								<Tooltip key={img.href}>
 									<TooltipTrigger asChild>
 										<a
@@ -74,8 +75,8 @@ export default function Index() {
 									</TooltipTrigger>
 									<TooltipContent>{img.alt}</TooltipContent>
 								</Tooltip>
-							))}
-						</TooltipProvider>
+							))} */}
+						{/* </TooltipProvider> */}
 					</div>
 				</div>
 			</div>
