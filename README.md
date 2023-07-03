@@ -1,8 +1,8 @@
 ## About wochstack
-Wochstack is a Fullstack Development Environment used to create high performing Web Applications. The starting stack's components are based on or come directly from The Epic Stack.
+Wochstack is a Fullstack Development Environment that used to create high performing Web Applications. The starting stack's components are based on, or come directly from, The Epic Stack.
 
 ### The Epic Stack
-"This is an opinionated project starter and reference that allows teams to ship their ideas to production faster and on a more stable foundation based on the experience of Kent C. Dodds and contributors." - Kent C. Dodds
+"This is an opinionated project starter and reference that allows teams to ship their ideas to production faster and on a more stable foundation based on the experience of Kent C. Dodds and contributors." -- Kent C. Dodds
 
 - Download/Pull
 
