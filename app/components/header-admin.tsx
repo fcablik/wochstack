@@ -4,7 +4,7 @@ import { AdminHeaderDropdown } from './dropdowns.tsx'
 
 export function AdminHeader() {
 	return (
-		<div className="py-2 px-5 border border-solid">
+		<header className="py-2 px-5 border border-solid">
 			<nav className="flex justify-between">
 				<div className='flex items-center gap-5'>
 					<Link to="/">
@@ -19,6 +19,6 @@ export function AdminHeader() {
 					<AdminHeaderDropdown />
 				</div>
 			</nav>
-		</div>
+		</header>
 	)
 }

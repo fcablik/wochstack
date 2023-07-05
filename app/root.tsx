@@ -14,6 +14,7 @@ import {
 	Scripts,
 	ScrollRestoration,
 	useLoaderData,
+	useMatches,
 } from '@remix-run/react'
 import { withSentry } from '@sentry/remix'
 import { useTheme } from './routes/resources+/theme/index.tsx'
@@ -126,7 +127,6 @@ export const headers: HeadersFunction = ({ loaderHeaders }) => {
 function App() {
 	const data = useLoaderData<typeof loader>()
 	const nonce = useNonce()
-	const user = useOptionalUser()
 	const theme = useTheme()
 	useToast(data.flash?.toast)
 
@@ -141,10 +141,7 @@ function App() {
 			</head>
 
 			<body>
-				{user ? <AdminHeader />	 : null}
-				<ClientHeader />
-					<Outlet />
-				<ClientFooter />
+				<RenderBasedContent />
 
 				<Confetti confetti={data.flash?.confetti} />
 				<Toaster />
@@ -164,3 +161,29 @@ function App() {
 	)
 }
 export default withSentry(App)
+
+
+function RenderBasedContent() {
+	const matches = useMatches()
+	const { id } = matches[matches.length - 1]
+	const routeAdmin = id.includes('admin')
+	const userAdmin = useOptionalUser()
+
+	if (routeAdmin) {
+		return (
+			<>
+				{userAdmin ? <AdminHeader /> : null}
+				<Outlet />
+			</>
+		)
+	} else {
+		return (
+			<>
+				{userAdmin ? <AdminHeader /> : null}
+				<ClientHeader />
+					<Outlet />
+				<ClientFooter />
+			</>
+		)
+	}
+}
