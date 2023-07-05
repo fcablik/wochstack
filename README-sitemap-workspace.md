@@ -34,3 +34,14 @@
         - role (user, owner, admin, superAdmin)
 
 4. /admin/metrics -> speed metrics of all web's pages
+
+
+
+
+
+
+LOGIN / SIGNUP scheme
+
+- I want admin to be able to log in safely
+- I do not want anybody to be able to signup
+- Move forgot password to admin section

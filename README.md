@@ -83,6 +83,6 @@ Wochstack is a Fullstack Development Environment that used to create high perfor
 Hello friends, My name is Filip and I am very passionate Fullstack Web Apps Developer.
 I like to discover and learn new tech, frameworks & services. Continuous progress and small steps ahead into the future is what makes my job and life so awesome. I love being a developer. I love talking about software, I like to use my knowledge to help others and the fact that my dream job is actually able to bring somebody any value is incredible. 🤗
 
-- 📫 How to reach me? filip@wochlife.com - / or on socials [@wochlife](https://instagram.com/wochlife)
-- 👨‍💻 Website: [wochlife.com](https://wochlife.com)
+- 📫 How to reach me? filip@wochdev.com - / or on socials [@wochdev](https://instagram.com/wochdev)
+- 👨‍💻 Website: [wochdev.com](https://wochdev.com)
 

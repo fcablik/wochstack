@@ -5,12 +5,12 @@
 // 	{
 // 		src: test,
 // 		alt: 'test',
-// 		href: 'https://wochlife.com',
+// 		href: 'https://wochdev.com',
 // 	},
 // 	{
 // 		src: testsvg,
 // 		alt: 'testsvg',
-// 		href: 'https://wochlife.com',
+// 		href: 'https://wochdev.com',
 // 	},
 // ]
 

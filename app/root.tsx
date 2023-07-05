@@ -63,7 +63,7 @@ export const links: LinksFunction = () => {
 export const meta: V2_MetaFunction = () => {
 	return [
 		{ title: 'Woch Stack' },
-		{ name: 'description', content: 'Wochlife\'s Development Environment' },
+		{ name: 'description', content: 'Wochdev\'s Development Environment' },
 	]
 }
 

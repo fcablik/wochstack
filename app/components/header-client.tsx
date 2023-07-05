@@ -11,7 +11,6 @@ export function ClientHeader() {
 				</Link>
 				<div className="flex items-center gap-10">
 					<ClientHeaderDropdown />
-					<Link to="/login">Log In</Link>
 				</div>
 			</nav>
 		</header>
