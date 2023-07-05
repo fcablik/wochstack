@@ -159,7 +159,7 @@ export default function EditUserProfile() {
 			<div className="flex gap-3">
 				<Link
 					className="text-muted-foreground"
-					to={`/users/${data.user.username}`}
+					to={`/admin/me`}
 				>
 					Profile
 				</Link>
