@@ -11,7 +11,7 @@ export function AdminHeader() {
 						<div className="font-light">home</div>
 					</Link>
 					<p>|</p>
-					<Link to="/admin">
+					<Link to="/admin/">
 						<div className="font-light">dashboard</div>
 					</Link>
 				</div>
