@@ -2,10 +2,10 @@
 
 0. BASE:
     Sidebar (left - 20%)
-    - (1.) /admin
-    - (2.) /admin/imports
-    - (3.) /users
-        - /users/userXYZ
+    - (1.) /admin           #DONE
+    - (2.) /admin/imports   
+    - (3.) /users           #DONE
+        - /users/userXYZ    #DONE
     Main content (right - 80%)
 
 1. /admin -> main section on the right (dashboard): inform us about:
@@ -17,18 +17,18 @@
     1. /admin/imports/texts
     2. /admin/imports/images
 
-3. /users -> list of users
+3. /users -> list of users      #DONE
     Display:
-    - all users
-    - add user option
+    - all users                 #DONE
+    - add user                 #preparedTpl - todo next (create simple form & prisma create function...)
     
-    Options to change for each user:
-    - role
-    - delete user    
+        Options of admins to change for each user:
+        - role
+        - delete user
 
-    1. /users/userXYZ - each user's profile (add/remove info & data)
+    1. /users/userXYZ - each user's profile (add/remove info & data)       #DONE
         Display:
-        - email
+        - email                                                            #DONE
         - name
         - new password option
         - role (user, owner, admin, superAdmin)

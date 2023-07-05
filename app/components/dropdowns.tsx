@@ -23,13 +23,15 @@ export function AdminHeaderDropdown() {
 						<img
 							className="h-8 w-8 rounded-full object-cover"
 							alt={user.name ?? user.username}
-							src={getUserImgSrc(user.imageId)} />
+							src={getUserImgSrc(user.imageId)} 
+						/>
 						<span className="text-body-sm font-bold">
 							{user.name ?? user.username}
 						</span>
 					</Link>
 				</Button>
 			</DropdownMenuTrigger>
+
 			<DropdownMenuPortal>
 				<DropdownMenuContent sideOffset={8} align="start">
 					<DropdownMenuItem asChild>
@@ -39,6 +41,7 @@ export function AdminHeaderDropdown() {
 							</Icon>
 						</Link>
 					</DropdownMenuItem>
+
 					<DropdownMenuItem asChild>
 						<Link prefetch="intent" to={`/admin/users/${user.username}/notes`}>
 							<Icon className="text-body-md" name="pencil-2">
@@ -46,6 +49,15 @@ export function AdminHeaderDropdown() {
 							</Icon>
 						</Link>
 					</DropdownMenuItem>
+
+					<DropdownMenuItem asChild>
+						<Link prefetch="intent" to={'/admin/createuser'}>
+							<Icon className="text-body-md" name="avatar">
+								Add User
+							</Icon>
+						</Link>
+					</DropdownMenuItem>
+
 					<DropdownMenuItem
 						asChild
 						// this prevents the menu from closing before the form submission is completed

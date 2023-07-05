@@ -65,7 +65,7 @@ Wochstack is a Fullstack Development Environment that used to create high perfor
 
 
 ## !TODO:
-- create sitemap for admin's functions visualization 
+- create sitemap for admin's functions visualization      #DONE
 - redesign User model (table) in db to match our criteria - no way to register, only admin/superadmin user can create other users with only sub-role permissions (superadmin -> only admin and lower..., admin -> only owner and lower, ...)
 - design admin environment
 

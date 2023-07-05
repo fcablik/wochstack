@@ -12,8 +12,8 @@ export const meta: V2_MetaFunction = () => [{ title: 'Woch Stack' }]
 export default function Index() {
 	return (
 		<main className="">
-			<h3 className="text-center text-h3 font-light">welcome to the</h3>
-			<h1 className="text-center text-mega font-light">wochstack</h1>
+			<h3 className="text-center text-h3 font-light">welcome to the homepage of</h3>
+			<h1 className="text-center text-mega font-light">wochstack app</h1>
 		</main>
 	)
 }
