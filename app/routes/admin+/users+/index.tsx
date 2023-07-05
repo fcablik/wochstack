@@ -19,7 +19,7 @@ export async function loader({request }: DataFunctionArgs) {
     return json({ users });
 }
 
-export default function UsersIndex() {
+export default function AdminUsersIndex() {
     const data = useLoaderData<typeof loader>();
 
     return (
