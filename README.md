@@ -27,7 +27,7 @@ Wochstack is a Fullstack Development Environment that used to create high perfor
   [LiteFS](https://fly.io/docs/litefs/).
 - Healthcheck endpoint for
   [Fly backups region fallbacks](https://fly.io/docs/reference/configuration/#services-http_checks)
-- [Grafana](https://grafana.com/) Dashboards of the running app
+- [Grafana](https://grafana.com/) Dashboards of the running app - (metrics of deployed app)
 - [GitHub Actions](https://github.com/features/actions) with testing and deploy
   on merge for both production and staging environments
 - Email/Password Authentication with
@@ -66,8 +66,11 @@ Wochstack is a Fullstack Development Environment that used to create high perfor
 
 ## !TODO:
 - create sitemap for admin's functions visualization 
-- !DONE: setup the whole environment to be ready to work and develop own customizations to get ready for the actual real development
-- !DONE: dashboard/admin setup - built in function of (requireUserWithPermission/requireAdmin) to get to the /admin page, if not logged in, client(user) will be redirected to the login page
+- redesign User model (table) in db to match our criteria - no way to register, only admin/superadmin user can create other users with only sub-role permissions (superadmin -> only admin and lower..., admin -> only owner and lower, ...)
+- design admin environment
+
+- - !DONE: setup the whole environment to be ready to work and develop own customizations to get ready for the actual real development
+- - !DONE: dashboard/admin setup - built in function of (requireUserWithPermission/requireAdmin) to get to the /admin page, if not logged in, client(user) will be redirected to the login page
 
 
 ### For Discussion:

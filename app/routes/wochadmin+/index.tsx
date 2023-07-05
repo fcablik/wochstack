@@ -1,23 +1,21 @@
 import { type DataFunctionArgs } from '@remix-run/node'
-import { Spacer } from '~/components/spacer.tsx'
+import { GeneralErrorBoundary } from '~/components/error-boundary.tsx'
 import { requireAdmin } from '~/utils/permissions.server.ts'
 
-export async function action({ request }: DataFunctionArgs) {
-	await requireAdmin(request)
+export async function loader({request }: DataFunctionArgs) {
+    await requireAdmin(request)
+	return null
 }
 
-export default function CacheAdminRoute() {
+export default function WochAdmin() {
 	return (
 		<div className="container mx-auto">
-			<h3 className="text-h1">Welcome to the dashboard of this Application</h3>
-			<Spacer size="2xs" />
+			<h5 className="text-center text-h3 font-light">Welcome to the dashboard of this Application</h5>
 		</div>
 	)
 }
 
-
-export function ErrorBoundary({ error }: { error: Error }) {
-	console.error(error)
-
-	return <div>An unexpected error occurred: {error.message}</div>
+export function ErrorBoundary() {
+	return <GeneralErrorBoundary />
 }
+//implement generalerrorboundary

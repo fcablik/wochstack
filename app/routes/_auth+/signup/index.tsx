@@ -97,7 +97,7 @@ export async function action({ request }: DataFunctionArgs) {
 
 	const response = await sendEmail({
 		to: email,
-		subject: `Welcome to Epic Notes!`,
+		subject: `Welcome to Woch Stack!`,
 		react: <SignupEmail onboardingUrl={onboardingUrl.toString()} otp={otp} />,
 	})
 
@@ -116,7 +116,7 @@ export async function action({ request }: DataFunctionArgs) {
 }
 
 export const meta: V2_MetaFunction = () => {
-	return [{ title: 'Sign Up | Epic Notes' }]
+	return [{ title: 'Sign Up | Woch Stack' }]
 }
 
 export default function SignupRoute() {
