@@ -51,7 +51,7 @@ export function AdminHeaderDropdown() {
 					</DropdownMenuItem>
 
 					<DropdownMenuItem asChild>
-						<Link prefetch="intent" to='/admin/createuser'>
+						<Link prefetch="intent" to='/admin/createuser/new'>
 							<Icon className="text-body-md" name="avatar">
 								Add User
 							</Icon>
