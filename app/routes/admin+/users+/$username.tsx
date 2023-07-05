@@ -81,7 +81,7 @@ export default function UsernameIndex() {
 									</Link>
 								</Button>
 								<Button asChild>
-									<Link to="/admin/settings/profile" prefetch="intent">
+									<Link to="/admin/user/profile" prefetch="intent">
 										Edit profile
 									</Link>
 								</Button>

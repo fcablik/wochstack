@@ -15,7 +15,7 @@ export function AdminHeaderDropdown() {
 			<DropdownMenuTrigger asChild>
 				<Button asChild variant="secondary">
 					<Link
-						to={`/users/${user.username}`}
+						to={`/admin/me`}
 						// this is for progressive enhancement
 						onClick={e => e.preventDefault()}
 						className="flex items-center gap-2"
@@ -33,7 +33,7 @@ export function AdminHeaderDropdown() {
 			<DropdownMenuPortal>
 				<DropdownMenuContent sideOffset={8} align="start">
 					<DropdownMenuItem asChild>
-						<Link prefetch="intent" to={`/users/${user.username}`}>
+						<Link prefetch="intent" to={`/admin/me`}>
 							<Icon className="text-body-md" name="avatar">
 								Profile
 							</Icon>
