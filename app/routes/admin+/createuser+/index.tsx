@@ -7,7 +7,7 @@ export async function loader({request }: DataFunctionArgs) {
 	return null
 }
 
-export default function CreateNewUserRoute() {
+export default function AdminCreateuserIndex() {
 	return (
 		<div className="container mx-auto flex flex-col justify-center pb-32 pt-20">
 			<div className="text-center">
