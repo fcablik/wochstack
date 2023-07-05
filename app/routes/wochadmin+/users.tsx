@@ -3,7 +3,6 @@ import { requireAdmin } from '~/utils/permissions.server.ts'
 import { Link, useLoaderData } from "@remix-run/react"
 import { prisma } from '~/utils/db.server.ts'
 import { getUserImgSrc } from "~/utils/misc.ts";
-import { requireUserId } from "~/utils/auth.server.ts";
 
 
 export async function loader({request }: DataFunctionArgs) {

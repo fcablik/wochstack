@@ -7,7 +7,7 @@ export function ClientHeader() {
 		<header className="container mx-auto py-6">
 			<nav className="flex justify-between">
 				<Link to="/">
-					<div className="font-light">LOGO</div>
+					<div className="font-light">LOGO/root route</div>
 				</Link>
 				<div className="flex items-center gap-10">
 					<ClientHeaderDropdown />

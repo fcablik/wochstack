@@ -22,8 +22,8 @@ export function ClientFooter() {
 	return (
 		<footer className="container mx-auto py-6">
 			<nav className="flex justify-between">
-                <Link prefetch="intent" to="/wochadmin">
-                    <div className="font-light">admin</div>
+                <Link prefetch="intent" to="/">
+                    <div className="font-light">home/root</div>
                 </Link>
 				<div className="flex items-center gap-10">
                     <ThemeSwitch userPreference={data.requestInfo.session.theme} />
