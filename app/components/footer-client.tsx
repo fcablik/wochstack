@@ -22,7 +22,7 @@ export function ClientFooter() {
 	return (
 		<footer className="container mx-auto py-6">
 			<nav className="flex justify-between">
-            <Link to="/wochadmin">
+                <Link prefetch="intent" to="/wochadmin">
                     <div className="font-light">admin</div>
                 </Link>
 				<div className="flex items-center gap-10">

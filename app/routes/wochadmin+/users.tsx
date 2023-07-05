@@ -8,7 +8,6 @@ import { requireUserId } from "~/utils/auth.server.ts";
 
 export async function loader({request }: DataFunctionArgs) {
     await requireAdmin(request);
-    const userId = await requireUserId(request)
     const users = await prisma.user.findMany({
         select: {
             id: true,

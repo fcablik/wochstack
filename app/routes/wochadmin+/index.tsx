@@ -18,4 +18,3 @@ export default function WochAdmin() {
 export function ErrorBoundary() {
 	return <GeneralErrorBoundary />
 }
-//implement generalerrorboundary

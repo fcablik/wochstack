@@ -1,5 +1,4 @@
 import type { V2_MetaFunction } from '@remix-run/node'
-import { stars } from './logos/logos.ts'
 // import { logos } from './logos/logos.ts'
 // import {
 // 	Tooltip,
