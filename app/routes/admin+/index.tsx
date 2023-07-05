@@ -1,5 +1,4 @@
 import { type DataFunctionArgs } from '@remix-run/node'
-import { useMatches } from '@remix-run/react'
 import { GeneralErrorBoundary } from '~/components/error-boundary.tsx'
 import { requireAdmin } from '~/utils/permissions.server.ts'
 
@@ -36,8 +35,6 @@ export default function AdminRoute() {
 					Welcome to the admin dashboard of this Application
 				</h5>
 			</div>
-
-		
 		</>
 	)
 }

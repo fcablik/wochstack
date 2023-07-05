@@ -125,7 +125,7 @@ export async function action({ request }: DataFunctionArgs) {
 		},
 	})
 
-	return redirect(`/users/${updatedUser.username}`, { status: 302 })
+	return redirect(`/admin/users/${updatedUser.username}`, { status: 302 })
 }
 
 export default function EditUserProfile() {

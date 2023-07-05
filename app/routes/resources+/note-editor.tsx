@@ -75,7 +75,7 @@ export async function action({ request }: DataFunctionArgs) {
 	} else {
 		note = await prisma.note.create({ data, select })
 	}
-	return redirectWithToast(`/users/${note.owner.username}/notes/${note.id}`, {
+	return redirectWithToast(`/admin/users/${note.owner.username}/notes/${note.id}`, {
 		title: id ? 'Note updated' : 'Note created',
 	})
 }

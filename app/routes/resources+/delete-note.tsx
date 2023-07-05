@@ -50,7 +50,7 @@ export async function action({ request }: DataFunctionArgs) {
 		where: { id: note.id },
 	})
 
-	return redirectWithToast(`/users/${note.owner.username}/notes`, {
+	return redirectWithToast(`/admin/users/${note.owner.username}/notes`, {
 		title: 'Note deleted',
 		variant: 'destructive',
 	})
