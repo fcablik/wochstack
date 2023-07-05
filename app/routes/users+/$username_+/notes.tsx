@@ -8,13 +8,15 @@ import { GeneralErrorBoundary } from '~/components/error-boundary.tsx'
 import { Icon } from '~/components/ui/icon.tsx'
 import { prisma } from '~/utils/db.server.ts'
 import { cn, getUserImgSrc } from '~/utils/misc.ts'
+import { requireAdmin } from '~/utils/permissions.server.ts'
 import {
 	combineServerTimings,
 	makeTimings,
 	time,
 } from '~/utils/timing.server.ts'
 
-export async function loader({ params }: DataFunctionArgs) {
+export async function loader({ request, params }: DataFunctionArgs) {
+	await requireAdmin(request)
 	const timings = makeTimings('notes loader')
 	const owner = await time(
 		() =>

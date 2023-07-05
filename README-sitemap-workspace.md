@@ -4,8 +4,8 @@
     Sidebar (left - 20%)
     - (1.) /admin
     - (2.) /admin/imports
-    - (3.) /admin/users
-        - /admin/users/userXYZ
+    - (3.) /users
+        - /users/userXYZ
     Main content (right - 80%)
 
 1. /admin -> main section on the right (dashboard): inform us about:
@@ -17,7 +17,7 @@
     1. /admin/imports/texts
     2. /admin/imports/images
 
-3. /admin/users -> list of users
+3. /users -> list of users
     Display:
     - all users
     - add user option
@@ -26,7 +26,7 @@
     - role
     - delete user    
 
-    1. /admin/users/userXYZ - each user's profile (add/remove info & data)
+    1. /users/userXYZ - each user's profile (add/remove info & data)
         Display:
         - email
         - name

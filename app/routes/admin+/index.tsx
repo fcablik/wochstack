@@ -10,7 +10,7 @@ export async function loader({request }: DataFunctionArgs) {
 export default function WochAdmin() {
 	return (
 		<div className="container mx-auto">
-			<h5 className="text-center text-h3 font-light">Welcome to the dashboard of this Application</h5>
+			<h5 className="text-center text-h3 font-light">Welcome to the admin dashboard of this Application</h5>
 		</div>
 	)
 }

@@ -10,9 +10,11 @@ import { Spacer } from '~/components/spacer.tsx'
 import { Button } from '~/components/ui/button.tsx'
 import { prisma } from '~/utils/db.server.ts'
 import { getUserImgSrc } from '~/utils/misc.ts'
+import { requireAdmin } from '~/utils/permissions.server.ts'
 import { useOptionalUser } from '~/utils/user.ts'
 
-export async function loader({ params }: DataFunctionArgs) {
+export async function loader({ request, params }: DataFunctionArgs) {
+	await requireAdmin(request)
 	invariant(params.username, 'Missing username')
 	const user = await prisma.user.findUnique({
 		where: { username: params.username },
@@ -79,7 +81,7 @@ export default function UsernameIndex() {
 									</Link>
 								</Button>
 								<Button asChild>
-									<Link to="/settings/profile" prefetch="intent">
+									<Link to="/admin/settings/profile" prefetch="intent">
 										Edit profile
 									</Link>
 								</Button>
