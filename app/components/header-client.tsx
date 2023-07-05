@@ -1,6 +1,6 @@
 import { Link } from '@remix-run/react'
 import { ClientHeaderDropdown } from './dropdowns.tsx'
-
+import { Button } from '@react-email/components'
 
 export function ClientHeader() {
 	return (
@@ -11,6 +11,7 @@ export function ClientHeader() {
 				</Link>
 				<div className="flex items-center gap-10">
 					<ClientHeaderDropdown />
+					<Link to="/login">Log In</Link>
 				</div>
 			</nav>
 		</header>
