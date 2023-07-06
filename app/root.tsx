@@ -124,11 +124,16 @@ export const headers: HeadersFunction = ({ loaderHeaders }) => {
 	return headers
 }
 
+
 function App() {
 	const data = useLoaderData<typeof loader>()
 	const nonce = useNonce()
 	const theme = useTheme()
 	useToast(data.flash?.toast)
+
+	const matches = useMatches()
+	const { id } = matches[matches.length - 1]
+	const routeAdmin = id.includes('admin')
 
 	return (
 		<html lang="en" className={`${theme} h-full`}>
@@ -141,7 +146,9 @@ function App() {
 			</head>
 
 			<body>
-				<RenderBasedContent />
+				<RenderHeaders routeAdmin={routeAdmin} />
+				<Outlet />
+				<RenderFooter routeAdmin={routeAdmin} />
 
 				<Confetti confetti={data.flash?.confetti} />
 				<Toaster />
@@ -163,27 +170,29 @@ function App() {
 export default withSentry(App)
 
 
-function RenderBasedContent() {
-	const matches = useMatches()
-	const { id } = matches[matches.length - 1]
-	const routeAdmin = id.includes('admin')
+function RenderHeaders({ routeAdmin }: { routeAdmin: boolean }) {
 	const userAdmin = useOptionalUser()
 
-	if (routeAdmin) {
+	if (!routeAdmin) {
 		return (
 			<>
 				{userAdmin ? <AdminHeader /> : null}
-				<Outlet />
+				<ClientHeader />
 			</>
 		)
 	} else {
 		return (
 			<>
 				{userAdmin ? <AdminHeader /> : null}
-				<ClientHeader />
-					<Outlet />
-				<ClientFooter />
 			</>
 		)
 	}
+}
+
+function RenderFooter({ routeAdmin }: { routeAdmin: boolean }) {
+	return (
+		<>
+			{!routeAdmin ? <ClientFooter /> : null}
+		</>
+	)
 }
