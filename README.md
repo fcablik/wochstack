@@ -65,12 +65,13 @@ Wochstack is a Fullstack Development Environment that used to create high perfor
 
 
 ## !TODO:
-- !DONE:  create sitemap for admin's functions visualization
 - redesign User model (table) in db to match our criteria - no way to register, only admin/superadmin user can create other users with only sub-role permissions (superadmin -> only admin and lower..., admin -> only owner and lower, ...)
 - design admin environment
-- !50/50-DONE: handle 404 not found page for blind routes - https://remix.run/guides/not-found  (handled my epic-stack in error-boundary.tsx)
+
+- !DONE:  handle 404 not found page for blind routes - https://remix.run/guides/not-found  (handled my epic-stack in error-boundary.tsx)
   - make the error boundary main div container 100% height and style it + add header, etc
 
+- - !DONE:  create sitemap for admin's functions visualization
 - - !DONE: setup the whole environment to be ready to work and develop own customizations to get ready for the actual real development
 - - !DONE: dashboard/admin setup - built in function of (requireUserWithPermission/requireAdmin) to get to the /admin page, if not logged in, client(user) will be redirected to the login page
 

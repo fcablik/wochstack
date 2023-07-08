@@ -24,8 +24,8 @@ async function seed() {
 	})
 	console.timeEnd(`👑 Created admin role/permission...`)
 
-// removed generating additional users
-	// const totalUsers = 5
+// removed section - generating additional faker users
+	// const totalUsers = 20
 	// console.time(`👤 Created ${totalUsers} users...`)
 	// const users = await Promise.all(
 	// 	Array.from({ length: totalUsers }, async (_, index) => {
@@ -62,13 +62,14 @@ async function seed() {
 	// 	}),
 	// )
 	// console.timeEnd(`👤 Created ${totalUsers} users...`)
+//
 
 	console.time(
-		`Created user "woch" with the password "wochdev" and admin role`,
+		`Created user "woch" with the password "wochlife" and admin role`,
 	)
 	await prisma.user.create({
 		data: {
-			email: 'filip@wochdev.com',
+			email: 'filip@wochlife.com',
 			username: 'woch',
 			name: 'World Of Chaos',
 			roles: { connect: { id: adminRole.id } },
@@ -86,7 +87,7 @@ async function seed() {
 			},
 			password: {
 				create: {
-					hash: await getPasswordHash('wochdev'),
+					hash: await getPasswordHash('wochlife'),
 				},
 			},
 			notes: {
@@ -111,8 +112,61 @@ async function seed() {
 		},
 	})
 	console.timeEnd(
-		`Created user "woch" with the password "wochdev" and admin role`,
+		`Created user "woch" with the password "wochlife" and admin role`,
 	)
+
+
+	console.time(
+		`Created user "jenda" with the password "jendovoheslo" and admin role`,
+	)
+	await prisma.user.create({
+		data: {
+			email: 'jendovoemail@gmail.com',
+			username: 'jenda',
+			name: 'Jenda Pospisil',
+			roles: { connect: { id: adminRole.id } },
+			image: {
+				create: {
+					contentType: 'image/png',
+					file: {
+						create: {
+							blob: await fs.promises.readFile(
+								'./tests/fixtures/images/user/5.jpg',
+							),
+						},
+					},
+				},
+			},
+			password: {
+				create: {
+					hash: await getPasswordHash('jendovoheslo'),
+				},
+			},
+			notes: {
+				create: [
+					{
+						title: 'Basic Koala Facts For Jenda',
+						content:
+							'Koalas are found in the eucalyptus forests of eastern Australia. They have grey fur with a cream-coloured chest, and strong, clawed feet, perfect for living in the branches of trees!',
+					},
+					{
+						title: 'Koalas like to cuddle For Jenda',
+						content:
+							'Cuddly critters, koalas measure about 60cm to 85cm long, and weigh about 14kg.',
+					},
+					{
+						title: 'Not bears For Jenda',
+						content:
+							"Although you may have heard people call them koala 'bears', these awesome animals aren’t bears at all – they are in fact marsupials. A group of mammals, most marsupials have pouches where their newborns develop.",
+					},
+				],
+			},
+		},
+	})
+	console.timeEnd(
+		`Created user "jenda" with the password "jendovoheslo" and admin role`,
+	)
+
 
 	console.timeEnd(`🌱 Database has been seeded`)
 }

@@ -10,11 +10,9 @@ import { Spacer } from '~/components/spacer.tsx'
 import { Button } from '~/components/ui/button.tsx'
 import { prisma } from '~/utils/db.server.ts'
 import { getUserImgSrc } from '~/utils/misc.ts'
-import { requireAdmin } from '~/utils/permissions.server.ts'
 import { useOptionalUser } from '~/utils/user.ts'
 
 export async function loader({ request, params }: DataFunctionArgs) {
-	await requireAdmin(request)
 	invariant(params.username, 'Missing username')
 	const user = await prisma.user.findUnique({
 		where: { username: params.username },
@@ -105,7 +103,9 @@ export function ErrorBoundary() {
 		<GeneralErrorBoundary
 			statusHandlers={{
 				404: ({ params }) => (
-					<p>No user with the username "{params.username}" exists</p>
+					<div className="container text-center mx-auto flex flex-col justify-center pb-32 pt-20 h-5/6">
+						<h3 className="text-h3">No user with the username "{params.username}" exists</h3>
+					</div>
 				),
 			}}
 		/>

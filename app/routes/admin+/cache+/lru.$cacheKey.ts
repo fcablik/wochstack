@@ -4,10 +4,8 @@ import invariant from 'tiny-invariant'
 import { getAllInstances, getInstanceInfo } from 'litefs-js'
 import { ensureInstance } from 'litefs-js/remix.js'
 import { lruCache } from '~/utils/cache.server.ts'
-import { requireAdmin } from '~/utils/permissions.server.ts'
 
 export async function loader({ request, params }: DataFunctionArgs) {
-	await requireAdmin(request)
 	const searchParams = new URL(request.url).searchParams
 	const currentInstanceInfo = await getInstanceInfo()
 	const allInstances = await getAllInstances()

@@ -3,10 +3,8 @@ import { requireUserId } from "~/utils/auth.server.ts";
 import { Link, useLoaderData } from "@remix-run/react"
 import { prisma } from '~/utils/db.server.ts'
 import { getUserImgSrc } from "~/utils/misc.ts";
-import { requireAdmin } from "~/utils/permissions.server.ts";
 
 export async function loader({request }: DataFunctionArgs) {
-    await requireAdmin(request)
     await requireUserId(request);
     const users = await prisma.user.findMany({
         select: {

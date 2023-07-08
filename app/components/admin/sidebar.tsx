@@ -30,8 +30,18 @@ export function AdminSidebar() {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/admin/createuser/">
+                            <Link to="/admin/usercreate/">
                                 <div className="font-light">add new user</div>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/admin/imports/">
+                                <div className="font-light">imports</div>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/admin/imports/texts/">
+                                <div className="font-light">import texts</div>
                             </Link>
                         </li>
 					</ul>
