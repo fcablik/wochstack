@@ -1,3 +1,7 @@
 export default function PrivacyRoute() {
-	return <div>Privacy</div>
+	return (
+		<main className='container mx-auto py-6'>
+			<h1 className="text-center text-mega font-light">privacy page</h1>
+		</main>
+	)
 }

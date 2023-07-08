@@ -35,8 +35,10 @@ import { getFlashSession } from './utils/flash-session.server.ts'
 import { useToast } from './utils/useToast.tsx'
 import { Toaster } from './components/ui/toaster.tsx'
 import { ClientHeader } from './components/header-client.tsx'
-import { AdminHeader } from './components/header-admin.tsx'
+import { AdminHeader } from './components/admin/header.tsx'
 import { ClientFooter } from './components/footer-client.tsx'
+import { GeneralErrorBoundary } from './components/error-boundary.tsx'
+import { ErrorHeader } from './components/header-error-boundary.tsx'
 
 export const links: LinksFunction = () => {
 	return [
@@ -147,7 +149,7 @@ function App() {
 
 			<body>
 				<RenderHeaders routeAdmin={routeAdmin} />
-				<Outlet />
+					<Outlet />
 				<RenderFooter routeAdmin={routeAdmin} />
 
 				<Confetti confetti={data.flash?.confetti} />
@@ -193,6 +195,16 @@ function RenderFooter({ routeAdmin }: { routeAdmin: boolean }) {
 	return (
 		<>
 			{!routeAdmin ? <ClientFooter /> : null}
+		</>
+	)
+}
+
+export function ErrorBoundary() {
+	return (
+		<>
+			<Links/>
+			<ErrorHeader/>
+			<GeneralErrorBoundary />
 		</>
 	)
 }

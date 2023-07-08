@@ -50,14 +50,6 @@ export function AdminHeaderDropdown() {
 						</Link>
 					</DropdownMenuItem>
 
-					<DropdownMenuItem asChild>
-						<Link prefetch="intent" to='/admin/createuser'>
-							<Icon className="text-body-md" name="avatar">
-								Add User
-							</Icon>
-						</Link>
-					</DropdownMenuItem>
-
 					<DropdownMenuItem
 						asChild
 						// this prevents the menu from closing before the form submission is completed

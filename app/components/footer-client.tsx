@@ -20,7 +20,7 @@ export function ClientFooter() {
     const data = useLoaderData<typeof loader>()
 
 	return (
-		<footer className="container mx-auto py-6">
+		<footer className='container mx-auto py-6'>
 			<nav className="flex justify-between">
                 <Link prefetch="intent" to="/">
                     <div className="font-light">home/root</div>
