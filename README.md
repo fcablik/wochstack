@@ -68,6 +68,9 @@ Wochstack is a Fullstack Development Environment that used to create high perfor
 - redesign User model (table) in db to match our criteria - no way to register, only admin/superadmin user can create other users with only sub-role permissions (superadmin -> only admin and lower..., admin -> only owner and lower, ...)
 - design admin environment
 
+- !! look into radix UI + prepare to tell Jenda to look into Radix + Tailwind to know if we can implement these straight into these apps - easier, stronger approach imho
+- think about what to create with this app omo.(onmyown) to profit at least something (and how to market it? -ytb videos?)
+
 - !DONE:  handle 404 not found page for blind routes - https://remix.run/guides/not-found  (handled my epic-stack in error-boundary.tsx)
   - make the error boundary main div container 100% height and style it + add header, etc
 

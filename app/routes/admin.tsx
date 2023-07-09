@@ -14,9 +14,9 @@ export default function AdminRoute() {
 		<>
 			<AdminSidebar />
 
-			<div className="p-4 sm:ml-64">
+			<main className="backend p-4 sm:ml-64">
 				<Outlet />
-			</div>
+			</main>
 		</>
 	)
 }

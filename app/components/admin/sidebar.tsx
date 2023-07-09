@@ -40,7 +40,7 @@ export function AdminSidebar() {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/admin/imports/texts/">
+                            <Link to="/admin/imports/texts">
                                 <div className="font-light">import texts</div>
                             </Link>
                         </li>
