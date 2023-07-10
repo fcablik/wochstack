@@ -106,9 +106,9 @@ export default function NotesRoute() {
 						))}
 					</ul>
 				</div>
-				<main className="col-span-3 bg-accent px-10 py-12 md:rounded-r-3xl">
+				<div className="col-span-3 bg-accent px-10 py-12 md:rounded-r-3xl">
 					<Outlet />
-				</main>
+				</div>
 			</div>
 		</div>
 	)

@@ -1,7 +1,7 @@
 export default function AdminIndexRoute() {
 	return (
-        <h5 className="text-center text-h3 font-light">
-            Welcome to the admin dashboard of this Application
-        </h5>
+            <div className="container text-center mx-auto flex flex-col justify-center pb-32 pt-20">
+                <h2 className="text-h2">Welcome to the admin dashboard of this Application</h2>
+            </div>
     )
 }

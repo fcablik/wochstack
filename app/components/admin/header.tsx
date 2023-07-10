@@ -1,4 +1,4 @@
-import { Link, useLoaderData } from '@remix-run/react'
+import { Link, useLoaderData, useMatches } from '@remix-run/react'
 import { json, type DataFunctionArgs } from '@remix-run/node'
 import { ThemeSwitch } from '~/routes/resources+/theme/index.tsx'
 import { getTheme } from '~/routes/resources+/theme/theme-session.server.ts'
@@ -20,8 +20,13 @@ export async function loader({ request }: DataFunctionArgs) {
 export function AdminHeader() {
 	const data = useLoaderData<typeof loader>()
 
+	const matches = useMatches()
+	const { id } = matches[matches.length - 1]
+	const routeAdmin = id.includes('admin')
+    const adminHeaderClassList = (routeAdmin ? ' fixed w-full' : '')
+
 	return (
-		<div className="py-2 px-5 border">
+		<div className={'py-2 px-5 border' + adminHeaderClassList}>
 			<nav className="flex justify-between">
 				<div className='flex items-center gap-5'>
 					<Link to="/">

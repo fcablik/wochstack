@@ -147,7 +147,7 @@ function App() {
 				<Links />
 			</head>
 
-			<body>
+			<body className={routeAdmin ? 'admin' : ''}>
 				<RenderHeaders routeAdmin={routeAdmin} />
 					<Outlet />
 				<RenderFooter routeAdmin={routeAdmin} />

@@ -87,3 +87,10 @@
 		@apply bg-background text-foreground;
 	}
 }
+
+
+body.admin main,
+.admin.sidebar  {
+    top: 58px;
+    position: relative;
+}
