@@ -42,6 +42,6 @@
 
 LOGIN / SIGNUP scheme
 
-- I want admin to be able to log in safely
-- I do not want anybody to be able to signup
-- Move forgot password to admin section
+- !DONE: I want admin to be able to log in safely
+- !DONE: I do not want anybody to be able to signup
+- !DONE: Move forgot password to admin section

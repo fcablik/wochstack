@@ -65,19 +65,22 @@ Wochstack is a Fullstack Development Environment that used to create high perfor
 
 
 ## !TODO:
+- to use objects/arrays from db, - create new model that will store all the texts and they will be related by id to the page/module (same logic as notes being assigned in their own model to each user)...
+
 - redesign User model (table) in db to match our criteria - no way to register, only admin/superadmin user can create other users with only sub-role permissions (superadmin -> only admin and lower..., admin -> only owner and lower, ...)
-- design admin environment
-
-- !! look into radix UI + prepare to tell Jenda to look into Radix + Tailwind to know if we can implement these straight into these apps - easier, stronger approach imho
-- think about what to create with this app omo.(onmyown) to profit at least something (and how to market it? -ytb videos?)
-
-- !DONE:  handle 404 not found page for blind routes - https://remix.run/guides/not-found  (handled my epic-stack in error-boundary.tsx)
-  - make the error boundary main div container 100% height and style it + add header, etc
+- start creating texts import (first create uploading file to db and transforming rows/columns into translations, then secondary depending on the output of the json from db of these translations - create shortcodes(aka. global translations variables/constants/functions))
 
 - - !DONE:  create sitemap for admin's functions visualization
 - - !DONE: setup the whole environment to be ready to work and develop own customizations to get ready for the actual real development
 - - !DONE: dashboard/admin setup - built in function of (requireUserWithPermission/requireAdmin) to get to the /admin page, if not logged in, client(user) will be redirected to the login page
+- !DONE: create and ux/ui admin environment
+- !DONE:  handle 404 not found page for blind routes - https://remix.run/guides/not-found  (handled my epic-stack in error-boundary.tsx)
+  - !DONE: make the error boundary main div container 100% height and style it + add header, etc
 
+
+### !TODO:: /w Jenda
+- !! look into Radix UI + prepare to tell Jenda to look into Radix + Tailwind to know if we can implement these straight into these apps - easier, stronger approach imho
+- think about components, that I could start working on (f.e. calendars, bookings, connections to airbnb/booking..   /   other components that can be developed even without ux/ui)
 
 ### For Discussion:
 - imports/texts/titles,etc. -> figure out the DB table scheme for "shortcuts" and mapping through the pages' texts that should be coming from the clients

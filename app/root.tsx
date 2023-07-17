@@ -63,9 +63,9 @@ export const links: LinksFunction = () => {
 	].filter(Boolean)
 }
 
-export const meta: V2_MetaFunction = () => {
+export const meta: V2_MetaFunction<typeof loader> = ({ data }) => {
 	return [
-		{ title: 'Woch Stack' },
+		{ title: data ? 'Woch Stack' : 'Error | Woch Stack' },
 		{ name: 'description', content: 'Wochdev\'s Development Environment' },
 	]
 }
